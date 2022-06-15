@@ -1,0 +1,27 @@
+<!-- templates/signup.html -->
+{% extends "base_generic.html" %}
+{% block title %}Signup{% endblock %}
+{% block header %}
+<header>
+    <div class="nav">
+      <h2 class="logo">Wash</h2>
+      <ul class="links">
+        <li><a>Главная</a></li>
+        <li><a>Стоимость</a></li>
+        <li><a>Услуги</a></li>
+        <li><a>О нас</a></li>
+        <li><a>Контакты</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+ 
+{% block content %}
+<div class='signup'>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">регистрация</button>
+  </form>
+</div>
+{% endblock content %}

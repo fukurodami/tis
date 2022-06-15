@@ -1,0 +1,50 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block title %}Catalog{% endblock %}
+
+{% block header %}
+<header>
+    <div class="nav">
+      <h2 class="logo">Wash</h2>
+      <ul class="links">
+        <li><a href='/'>Главная</a></li>
+        <li><a href='/us'>О нас</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+
+
+{% block content %}
+
+{% block signin %}
+  {% if user.is_authenticated %}
+    <div class="logout">
+        <p>{{ user.username }}!</p>
+        <p><a href="{% url 'logout' %}">Выход</a></p>
+        <div class="text">
+            <h1>Чистое белье</h1>
+            <div class="cost">
+                <h1> от 250р</h1>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="info">
+          {% for serves in serveses%}
+          <a href="{{ serves.id}}"><ul class="serveses">
+            <li>{{serves.title}}</li>
+            <li>{{serves.description}}</li>
+            <li>Средний чек -{{serves.coast}}р.</li>
+          </ul></a>
+          {% endfor %}
+        </div>
+    </div>
+    
+  {% else %}
+    <p>You are not logged in.</p>
+    <a href="{% url 'login' %}">Вход</a>
+    {% endif %}
+{% endblock %}
+
+{% endblock %}

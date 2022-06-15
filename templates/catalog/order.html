@@ -1,0 +1,47 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block title %}Order{% endblock %}
+{% block header %}
+<header>
+    <div class="nav">
+      <h2 class="logo">Wash</h2>
+      <ul class="links">
+        <li><a href='/'>Главная</a></li>
+        <li><a href='/us'>О нас</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+{% block content %}
+    
+        {% if user.is_authenticated %}
+            <div class="logout">
+                <p>{{ user.username }}!</p>
+                <p><a href="{% url 'logout' %}">Выход</a></p>
+                
+            {% else %}
+                <p>You are not logged in.</p>
+                <a href="{% url 'login' %}">Вход</a>
+        {% endif %}
+    </div>
+    
+    
+    {% block forma %}
+        {% if user.is_authenticated %}
+        <div class="form_order">
+            <form action="" method="post">
+                {% csrf_token %}               
+                <ul>
+                    <h1>Заказ на дом</h1>
+                    <div class="pp"><li>Улица: {{ form.street }}</li></div>
+                    <div class="pp"><li>Строение: {{ form.build }}</li></div>
+                    <div class="pp"><li>Квартира: {{ form.home }}</li></div>
+                    <div class="pp"><li>Время: {{ form.time }}</li></div>
+                    <div class="pp"><li>Телефон: {{ form.phone }}</li></div>
+                <ul>
+                <button class="bpp" type="submit">Заказать</button>     
+            </form>
+        </div> 
+        {% endif %}
+    {% endblock %}
+{% endblock %}

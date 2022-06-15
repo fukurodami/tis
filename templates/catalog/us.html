@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block title %}Order{% endblock %}
+{% block header %}
+<header>
+    <div class="nav">
+      <h2 class="logo">Wash</h2>
+      <ul class="links">
+        <li><a href='/'>Главная</a></li>
+        <li><a href='/us'>О нас</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+{% block content %}
+    
+        {% if user.is_authenticated %}
+            <div class="logout">
+                <p>{{ user.username }}!</p>
+                <p><a href="{% url 'logout' %}">Выход</a></p>
+                
+            {% else %}
+                <p>You are not logged in.</p>
+                <a href="{% url 'login' %}">Вход</a>
+        {% endif %}
+    </div>
+
+    <ul class="aq">
+        <h1>Информация о предприятии "Прачечная"</h1>
+        <div class="aw">
+        <div class="aqw"><li><h3>Чито мы стираем: </h3><p>В наших  прачечных можно постирать одежду, постельное бельё, куртки, пуховики, одеяла, пледы, мебельные чехлы, подушки и т.п.</p></li></div>
+        <div class="aqw"><li><h3>Это доступно:</h3><p>Стоимость стирки составляет от 250 рублей за загрузку стандартной машины до 5 кг.</p></li></div>
+        <div class="aqw"><li><h3>Это быстро:</h3><p>Готовсность стирки окло 3х дней, ваше белье заберут и доставят уже обработанным</p></li></div>
+        <div class="aqw"><li><h3>Адреса:</h3><p>Укажите ваш адрес и удобное время для визиты, мы работаем оперативно и по всему городу</p></li></div>
+        <div class="aqw"><li><h3>Команда:</h3><p>На нашем предприятии работают квалифицированные специалисты с опытом работы 15 лет</p></li></div>
+        <div class="aqw"><li><h3>Контакты:</h3><p>Наше предприятие распологается в Городе томск, ул. Котовского, д.6 </p></li></div>
+        <div class="aqw"><li><h3>Телефон:</h3><p>89009210534-контактный номер оператора службы</p></li></div>
+    </div>
+    <ul>
+
+    
+{% endblock %}

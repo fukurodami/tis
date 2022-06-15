@@ -1,0 +1,32 @@
+{% load static %}
+<html lang="ru">
+  <head>
+    <title>{% block title %}Local Library{% endblock %}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/registration/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <header>
+      {% block header %}
+      
+      {% endblock %}
+    </header>
+    
+    {% block content %}
+    
+      {% block signin %}
+      {% endblock %}
+
+      {% block forma %}
+      {% endblock %}
+
+      
+    {% endblock %}
+    
+  </body>
+</html>

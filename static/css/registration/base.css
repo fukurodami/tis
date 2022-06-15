@@ -1,0 +1,171 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    list-style: none;
+ }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+body {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 1;
+    color: #373737;
+    background: url(/media/main.jpeg) no-repeat center fixed;
+    background-size: cover;
+}
+.nav{
+    display: flex;
+    padding: 30px 100px;
+    background-color: #c3fffc;
+    
+}
+.links{
+    display: flex;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center;
+    text-decoration: none;
+}
+.links>li{
+    padding: 0 70px;
+    list-style-type: none;
+    font-size: 18px;
+    
+}
+
+.signup {
+    text-align: left;
+    margin: 300px;
+    padding: 70px 30px;
+    background: rgba(212, 227, 89, 0.3);
+    font-size: 18px;
+}
+
+.logout{
+    position: absolute;
+    margin: -30px 100px;
+    display: flex;
+    font-size: 18px;
+}
+
+.sig{
+    text-align: left;
+    
+    padding: 70px 30px;
+    background: rgba(212, 227, 89, 0.3);
+    font-size: 18px;
+}
+
+.text{
+    margin: 300px 250px;
+    background: rgba(212, 227, 89, 0.3);
+    padding: 30px 15px;
+}
+
+.cost{
+    border-bottom: 5px solid #373737;
+    font-size: 32px;
+}
+
+
+
+.content{
+	margin-top: 1000px;
+    height: 600px;
+    padding: 0 15px;
+    background-color: rgb(157, 255, 255);
+    
+}
+
+.info{
+    float: left;
+    text-align: center;
+    display: flex;
+    margin: 150px 200px;
+    
+}
+
+.serveses{
+    border-radius: 30px;
+    background-color: white;
+    margin: 0 60px;
+    padding: 30px 50px;
+    font-weight: bold;
+    
+}
+
+.serveses > li {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #373737;
+}
+.form_order{
+    height: 50%;
+    width: 25%;
+    background-color: rgba(50, 129, 199, 0.349);  
+    padding: 50px;
+    display: flex;
+    margin: 200px auto;
+    display: block;
+    border: 3px #373737;
+    border-radius: 8px;
+}
+.pp{
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.pp > li > input{
+    border-radius: 8px;
+    padding: 5px;
+    
+}
+.pp > li > select{
+    border-radius: 8px;
+    padding: 5px;
+}
+.bpp{
+    margin: 0 100px;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgb(95, 231, 255);
+}
+
+.aqw{
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.aq{
+    border-radius: 8px;
+    padding: 5px;
+    background-color: rgba(95, 231, 255, 0.658);
+    text-align: center;
+}
+
+.aw{
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.aw > .aqw > li > h3 {
+    color: rgb(42, 112, 216);
+    font-weight: 700;
+    margin-bottom: 8px;
+    
+}
